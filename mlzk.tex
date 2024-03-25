@@ -4,26 +4,54 @@
 
 \input{prelim}
 
-\title{Matching Logic Proofs Meet Succinct Cryptographic Proofs}
-\author{Bolton Bailey\textsuperscript{1} \and Xiaohong Chen\textsuperscript{1} \and Adam Fiedler\textsuperscript{3} \and Harjasleen Malvai\textsuperscript{1} \and Andrew Miller\textsuperscript{1} \and Pratyush Mishra\textsuperscript{2} \and Nishant Rodrigues\textsuperscript{1} \and Grigore Rosu\textsuperscript{1,3}}
+\newcommand{\af}{\textsuperscript}
+\newcommand{\afuiuc}{1}
+\newcommand{\afupen}{2}
+\newcommand{\afpisqrd}{3}
+\newcommand{\afrv}{4}
+
+\title{{\Large Technical Report}\\
+  Matching Logic Proofs Meet Succinct Cryptographic Proofs}
+\author{Bolton Bailey\af{\afuiuc,\afpisqrd}
+   \and Xiaohong Chen\af{\afuiuc,\afpisqrd,\afrv,$\dag$} 
+    \and Adam Fiedler\af{\afpisqrd,\afrv} 
+    \and Harjasleen Malvai\af{\afuiuc} 
+    \and Andrew Miller\af{\afuiuc} 
+    \and Pratyush Mishra\af{\afupen} 
+    \and Nishant Rodrigues\af{\afuiuc,\afpisqrd,\afrv} 
+    \and Grigore Ro{\c{s}}u\af{\afuiuc,\afpisqrd,\afrv}
+}
 \date{}
 
 \begin{document}
 
 \maketitle
+
+\vspace{-2\baselineskip}
 \begin{center}
-\textsuperscript{1}University of Illinois Urbana-Champaign, USA\\
-\textsuperscript{2}University of Pennsylvania, USA\\
-\textsuperscript{3}Runtime Verification Inc., USA
+\textsuperscript{\afuiuc}\textit{University of Illinois Urbana-Champaign}\\
+\textsuperscript{\afupen}\textit{University of Pennsylvania}\\
+\textsuperscript{\afpisqrd}\textit{Pi Squared Inc.}\\
+\textsuperscript{\afrv}\textit{Runtime Verification Inc.}\\
+\textsuperscript{$\dag$}\textit{Corresponding author: Xiaohong Chen, }\url{xiaohong.chen@pi2.network}
 \end{center}
 
 \begin{abstract}
-We first present the syntax and proof system of matching logic.
-Then, we introduce the research problem of producing embarrassingly parallel
-cryptographic proofs for matching logic.
-\end{abstract}
+We present the syntax and the proof system of matching logic
+and introduce the research problem of producing 
+succinct cryptographic proofs for checking matching logic proofs. 
 
-\tableofcontents
+This technical report was written by Chen and firstly published
+on GitHub at his personal repository
+\url{https://github.com/xc93/pi-square-doc/commits/main/mlzk.pdf}
+in June 2023. 
+The idea of achieving verifiable computing 
+via combining mathematical proofs and cryptographic proofs
+was firstly explained by Ro\c{s}u in his presentation
+\textit{The K Approach and Vision} in 2020;
+see slide 99 of the slide deck at
+\url{https://drive.google.com/file/d/1iXda2NyGzKVWxkd02IlXj5Tq5cOM_gNd/view}. 
+\end{abstract}
 
 \section{Matching Logic}
 
